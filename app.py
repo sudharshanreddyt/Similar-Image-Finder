@@ -42,7 +42,13 @@ def load_image_with_loaded_model(input_source, models, is_url=True):
     similar_image_urls = []
 
     if is_url:
-        own_img = Image.open(BytesIO(requests.get(input_source).content)).convert("RGB")
+        try:
+            response = requests.get(input_source, timeout=10)
+            if response.status_code == 200:
+                own_img = Image.open(BytesIO(response.content)).convert("RGB")
+        except:
+            st.error("Error loading image from URL")
+            return []
     else:
         own_img = Image.open(input_source).convert("RGB")    
 
@@ -106,10 +112,11 @@ def main():
     url_input = st.text_input("Enter the image url")
     if url_input:
         try:
-            response = requests.get(url_input)
-            input_image = Image.open(BytesIO(response.content))
-            input_source = url_input
-            is_url = True
+            response = requests.get(url_input, timeout= 10)
+            if response.status_code == 200:
+                input_image = Image.open(BytesIO(response.content))
+                input_source = url_input
+                is_url = True
         except:
             st.error("Could not load the image")
 
