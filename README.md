@@ -1,7 +1,7 @@
 # Similar Image Finder
 
 A web application that finds visually similar images from a curated dataset of Unsplash Lite photos using OpenAI's CLIP model and K-Nearest Neighbors (KNN) algorithm. Built with Streamlit and deployed at:  
-👉 [**App Link**](https://similar-image-finder-sss.streamlit.app/)
+[**App Link**](https://similar-image-finder-sss.streamlit.app/)
 
 ---
 
@@ -52,7 +52,7 @@ Open `http://localhost:8501` in your browser to view the app.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── app.py                     # Main Streamlit app
@@ -78,7 +78,7 @@ Open `http://localhost:8501` in your browser to view the app.
 ## Demo
 
 Try the live app:  
-🔗 [https://similar-image-finder-sss.streamlit.app/](https://similar-image-finder-sss.streamlit.app/)
+[https://similar-image-finder-sss.streamlit.app/](https://similar-image-finder-sss.streamlit.app/)
 
 You can either:
 - Paste an image URL, or
@@ -94,7 +94,7 @@ This project was developed as part of **CSCI 6364 - Machine Learning** at **The 
 
 ---
 
-## 👥 Authors
+## Authors
 
 - **Sudharshan Reddy Thammaiahgari**
 - **Sneha Uppu**
@@ -102,7 +102,7 @@ This project was developed as part of **CSCI 6364 - Machine Learning** at **The 
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 - [OpenAI CLIP](https://github.com/openai/CLIP)
 - [Unsplash Dataset](https://unsplash.com/data)
